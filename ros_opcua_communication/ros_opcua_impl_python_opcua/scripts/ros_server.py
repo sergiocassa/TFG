@@ -109,10 +109,6 @@ class ROSServer:
 
         rospy.loginfo("Nodo Desglose con variables individuales ha sido creado en el servidor OPC UA.")
 
-
-        rospy.loginfo("Nodo Desglose con variables individuales ha sido creado en el servidor OPC UA.")
-
-
         rospy.loginfo("Servidor OPC UA esta corriendo con las variables personalizadas")
 
         while not rospy.is_shutdown():
@@ -209,6 +205,13 @@ class ROSServer:
 
 
 def main(args):
+    rosserver = ROSServer()
+    rosserver.run()
+
+
+if __name__ == "__main__":
+    main(sys.argv)
+
     rosserver = ROSServer()
     rosserver.run()
 
